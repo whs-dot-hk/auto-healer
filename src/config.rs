@@ -1,3 +1,5 @@
+// Copyright (c) 수영 책방 Swimming Bookstore
+
 use anyhow::{bail, Context, Result};
 use serde::Deserialize;
 use std::collections::BTreeMap;

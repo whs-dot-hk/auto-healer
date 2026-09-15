@@ -1,3 +1,5 @@
+// Copyright (c) 수영 책방 Swimming Bookstore
+
 use std::time::{Duration, Instant};
 
 pub struct Backoff {

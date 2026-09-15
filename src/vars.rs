@@ -1,3 +1,5 @@
+// Copyright (c) 수영 책방 Swimming Bookstore
+
 use crate::config::{is_var_name, Query, Var};
 use crate::shell;
 use anyhow::{bail, Result};

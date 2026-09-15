@@ -1,3 +1,5 @@
+// Copyright (c) 수영 책방 Swimming Bookstore
+
 use crate::backoff::Backoff;
 use crate::config::{parse_cron, Query};
 use crate::prometheus::{self, Client};

@@ -1,5 +1,7 @@
 # auto-healer
 
+Let auto-healer do your work.
+
 Each `[[queries]]` row is its own loop:
 
 1. wait for **cron**
@@ -56,3 +58,7 @@ bash scripts/record_demo.sh     # writes docs/demo.mp4
 ```
 
 <video src="docs/demo.mp4" controls width="720"></video>
+
+## License
+
+Copyright (c) 수영 책방 Swimming Bookstore. MIT. See `LICENSE`.
