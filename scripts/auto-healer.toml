@@ -1,0 +1,31 @@
+[prometheus]
+url = "http://127.0.0.1:19090"
+timeout = "3s"
+
+# Query 1 — web is down? restart it.
+# ${job} comes from a shell command each tick.
+[[queries]]
+name = "restart-web"
+query = 'up{job="${job}"} == 0'
+cron = "*/2 * * * * *"
+debounce = "6s"
+debounce_max = "16s"
+command = "python3 scripts/heal.py"
+command_timeout = "8s"
+
+[queries.vars]
+job = { command = "printf web", timeout = "2s" }
+
+# Query 2 — own cron + debounce. CPU spike does not wait on the web healer.
+[[queries]]
+name = "scale-api"
+query = 'cpu{job="${job}"} > ${threshold}'
+cron = "*/2 * * * * *"
+debounce = "3s"
+debounce_max = "12s"
+command = "python3 scripts/scale.py ${job}"
+command_timeout = "5s"
+
+[queries.vars]
+job = "api"
+threshold = { command = "cat scripts/cpu-threshold", timeout = "2s" }

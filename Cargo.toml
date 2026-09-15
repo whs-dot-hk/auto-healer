@@ -1,0 +1,19 @@
+[package]
+name = "auto-healer"
+version = "0.1.0"
+edition = "2021"
+description = "Poll Prometheus on per-query crons and run shell commands with debounce"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+clap = { version = "4", features = ["derive"] }
+cron = "0.12"
+humantime-serde = "1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "process", "time", "signal"] }
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

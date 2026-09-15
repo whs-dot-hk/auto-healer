@@ -1,0 +1,34 @@
+[prometheus]
+url = "http://127.0.0.1:9090"
+timeout = "15s"
+
+# Each query has its own cron and debounce.
+# Cron is 5 fields (min hour day month dow) or 6 (sec min hour day month dow).
+# After a fire, skip Prometheus for `debounce`; each later fire doubles that wait up to debounce_max.
+# Put the condition in PromQL; the command runs when the query returns any series.
+# Vars are resolved every tick and substituted as ${name} in query and command.
+
+[[queries]]
+name = "restart-web-on-high-error-rate"
+query = 'sum(rate(http_requests_total{job="${job}",code=~"5.."}[5m])) > 0.1'
+cron = "*/30 * * * * *"   # every 30 seconds
+debounce = "5m"
+debounce_max = "40m"
+command = "systemctl restart ${unit}"
+command_timeout = "30s"
+
+[queries.vars]
+job = "web"
+unit = "web"
+
+[[queries]]
+name = "scale-when-cpu-high"
+query = 'avg(rate(process_cpu_seconds_total{job="${job}"}[2m])) > ${threshold}'
+cron = "*/1 * * * *"      # every minute
+debounce = "10m"
+command = "echo scale-out ${job}"
+cwd = "/tmp"
+
+[queries.vars]
+job = "api"
+threshold = { command = "cat /etc/healer/cpu-threshold", timeout = "2s" }
