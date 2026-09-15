@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="devops essential auto-healer loop">
+  <rect width="1080" height="1080" fill="#fff9ef"/>
+
+  <text x="540" y="88" text-anchor="middle" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="500" letter-spacing="8" fill="#6a5c4e">DEVOPS ESSENTIAL</text>
+  <text x="540" y="176" text-anchor="middle" font-family="Cormorant Garamond, Noto Serif KR, serif" font-size="72" font-weight="600" fill="#1d3550">auto-healer loop</text>
+  <text x="540" y="228" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="30" fill="#6a5c4e">Let auto-healer do your work.</text>
+
+  <rect x="90" y="280" width="900" height="630" fill="#fff9ef" stroke="#1d3550" stroke-width="2"/>
+
+  <rect x="90" y="280" width="450" height="105" fill="#1d3550"/>
+  <rect x="540" y="280" width="450" height="105" fill="#1d3550"/>
+  <line x1="540" y1="280" x2="540" y2="385" stroke="#fff9ef" stroke-width="3"/>
+  <line x1="540" y1="385" x2="540" y2="910" stroke="#1d3550" stroke-width="2"/>
+
+  <text x="315" y="332.5" text-anchor="middle" dominant-baseline="middle" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="500" letter-spacing="2" fill="#fff9ef">agent loop</text>
+  <text x="765" y="332.5" text-anchor="middle" dominant-baseline="middle" font-family="Outfit, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="500" letter-spacing="2" fill="#fff9ef">auto-healer loop</text>
+
+  <line x1="90" y1="385" x2="990" y2="385" stroke="#1d3550" stroke-width="2"/>
+  <text x="315" y="472.5" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, serif" font-size="36" fill="#6a5c4e">Call LLM</text>
+  <text x="765" y="472.5" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, serif" font-size="36" font-weight="600" fill="#1d3550">Call Prometheus</text>
+
+  <line x1="90" y1="560" x2="990" y2="560" stroke="#1d3550" stroke-width="1.5"/>
+  <text x="315" y="647.5" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, serif" font-size="36" fill="#6a5c4e">Run tools</text>
+  <text x="765" y="647.5" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, serif" font-size="36" font-weight="600" fill="#1d3550">Run healing actions</text>
+
+  <line x1="90" y1="735" x2="990" y2="735" stroke="#1d3550" stroke-width="1.5"/>
+  <text x="315" y="822.5" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, serif" font-size="36" fill="#6a5c4e">Loop</text>
+  <text x="765" y="822.5" text-anchor="middle" dominant-baseline="middle" font-family="Cormorant Garamond, serif" font-size="36" font-weight="600" fill="#1d3550">Cron jobs</text>
+
+  <text x="540" y="990" text-anchor="middle" font-family="Noto Serif KR, Cormorant Garamond, serif" font-size="20" fill="#6a5c4e">© 수영 책방 Swimming Bookstore</text>
+</svg>

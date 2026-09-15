@@ -1,3 +1,5 @@
+// Copyright (c) 수영 책방 Swimming Bookstore
+
 use crate::config::Prometheus;
 use anyhow::{bail, Context, Result};
 use reqwest::Url;

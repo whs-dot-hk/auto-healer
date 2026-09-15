@@ -2,7 +2,10 @@
 name = "auto-healer"
 version = "0.1.0"
 edition = "2021"
-description = "Poll Prometheus on per-query crons and run shell commands with debounce"
+description = "Let auto-healer do your work."
+authors = ["수영 책방 Swimming Bookstore"]
+license = "MIT"
+copyright = "Copyright (c) 수영 책방 Swimming Bookstore"
 
 [dependencies]
 anyhow = "1"
